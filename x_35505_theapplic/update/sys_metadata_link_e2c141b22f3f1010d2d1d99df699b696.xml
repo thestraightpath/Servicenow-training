@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>8cd2a7792ddc94107f449a335168469b</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="kb_knowledge"&gt;
+    &lt;kb_knowledge action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article_type&gt;text&lt;/article_type&gt;
+        &lt;author display_value="System Administrator"&gt;6816f79cc0a8016401c5a33be04be441&lt;/author&gt;
+        &lt;can_read_user_criteria/&gt;
+        &lt;cannot_read_user_criteria/&gt;
+        &lt;category/&gt;
+        &lt;cmdb_ci/&gt;
+        &lt;description/&gt;
+        &lt;direct&gt;false&lt;/direct&gt;
+        &lt;disable_commenting&gt;false&lt;/disable_commenting&gt;
+        &lt;disable_suggesting&gt;false&lt;/disable_suggesting&gt;
+        &lt;display_attachments&gt;false&lt;/display_attachments&gt;
+        &lt;flagged&gt;false&lt;/flagged&gt;
+        &lt;image/&gt;
+        &lt;kb_category/&gt;
+        &lt;kb_knowledge_base display_value="Knowledge"&gt;dfc19531bf2021003f07e2c1ac0739ab&lt;/kb_knowledge_base&gt;
+        &lt;meta/&gt;
+        &lt;meta_description&gt;Copy and paste the following information from the knowledge article and create in the "Global" scope&lt;/meta_description&gt;
+        &lt;number&gt;KB0010007&lt;/number&gt;
+        &lt;published&gt;2020-04-23&lt;/published&gt;
+        &lt;rating/&gt;
+        &lt;retired/&gt;
+        &lt;roles/&gt;
+        &lt;short_description&gt;BONUS - Clear Repository UI Action&lt;/short_description&gt;
+        &lt;source/&gt;
+        &lt;sys_class_name&gt;kb_knowledge&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-04-21 20:25:38&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;8cd2a7792ddc94107f449a335168469b&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-04-23 00:52:04&lt;/sys_updated_on&gt;
+        &lt;sys_view_count&gt;0&lt;/sys_view_count&gt;
+        &lt;text&gt;&lt;![CDATA[&lt;p&gt;Copy and paste the following information from the knowledge article and create in the &amp;#34;Global&amp;#34; scope as a UI Action following the instructions in the manual.&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;Name: &lt;/strong&gt;Clear Repository&lt;br /&gt;&lt;strong&gt;Table:&lt;/strong&gt; Custom Application [sys_app]&lt;br /&gt;&lt;strong&gt;Order:&lt;/strong&gt; 100&lt;br /&gt;&lt;strong&gt;Action name:&lt;/strong&gt; clear_repository&lt;br /&gt;&lt;strong&gt;Show Insert&lt;/strong&gt;: Checked&lt;br /&gt;&lt;strong&gt;Show Update:&lt;/strong&gt; Checked&lt;br /&gt;&lt;strong&gt;Client&lt;/strong&gt;: Checked&lt;br /&gt;&lt;strong&gt;Form Button:&lt;/strong&gt; Checked&lt;br /&gt;&lt;strong&gt;Comments:&lt;/strong&gt; Clear the given application repository url&lt;br /&gt;&lt;strong&gt;Onclick:  &lt;/strong&gt;clearRepository();&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;&lt;span style="text-decoration: underline;"&gt;Requires Role Tab&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;Requires Role:&lt;/strong&gt; admin&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;&lt;strong&gt;Condition&lt;/strong&gt;: !current.isNewRecord() &amp;amp;&amp;amp; current.canWrite() &amp;amp;&amp;amp; gs.hasRole(&amp;#39;admin&amp;#39;)&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Script:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;//*****Start of Script*****&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;p&gt;function clearRepository() {&lt;br /&gt;gsftSubmit(null, g_form.getFormElement(), &amp;#39;clear_repository&amp;#39;);&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;if (typeof window &amp;#61;&amp;#61; &amp;#39;undefined&amp;#39;) {&lt;br /&gt;clearUrl();&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;function clearUrl() {&lt;br /&gt;var repository_configuration &amp;#61; new GlideRecord(&amp;#39;sys_repo_config&amp;#39;);&lt;br /&gt;if (repository_configuration.get(&amp;#39;sys_app&amp;#39;, current.sys_id)) {&lt;br /&gt;repository_configuration.deleteRecord();&lt;br /&gt;}&lt;br /&gt;}&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;//*****End of Script*****&lt;/strong&gt;&lt;/p&gt;]]&gt;&lt;/text&gt;
+        &lt;topic&gt;General&lt;/topic&gt;
+        &lt;use_count&gt;0&lt;/use_count&gt;
+        &lt;valid_to&gt;2100-01-01&lt;/valid_to&gt;
+        &lt;wiki/&gt;
+        &lt;workflow_state&gt;published&lt;/workflow_state&gt;
+    &lt;/kb_knowledge&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=8cd2a7792ddc94107f449a335168469b"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-15 10:55:47</sys_created_on>
+        <sys_id>e2c141b22f3f1010d2d1d99df699b696</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB0010007</sys_name>
+        <sys_package display_value="TheApplication" source="x_35505_theapplic">ecd15b022f731010d2d1d99df699b6c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</sys_scope>
+        <sys_update_name>sys_metadata_link_e2c141b22f3f1010d2d1d99df699b696</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:55:47</sys_updated_on>
+        <tablename>kb_knowledge</tablename>
+    </sys_metadata_link>
+</record_update>
