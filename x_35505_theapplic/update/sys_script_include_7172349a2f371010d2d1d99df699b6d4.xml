@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_35505_theapplic.TheApplicationAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Utilities to specifically support TheApplication scoped application</description>
+        <name>TheApplicationAjax</name>
+        <script><![CDATA[//*****Start of Script*****
+
+//NOTE: the x_XXXX may need to be changed to match the name of your TheLibrary application name
+var utils = x_35505_thelibrar.TheLibrary;
+
+var TheApplicationAjax = Class.create();
+TheApplicationAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    // Send the passed in JSON to be written to the System Log
+    systemLogger: function() {
+        var logjson = JSON.parse(this.getParameter('sysparm_logjson'));
+        utils.parseAndWriteLog(logjson);
+    },
+
+    // Obtain the Address from TheLibrary Lookup table, and pass it back to
+    // the client(browser)
+    getAddress: function() {
+        var name = this.getParameter('sysparm_username');
+        return utils.getLookupRecord(name);
+    },
+
+    type: 'TheApplicationAjax'
+});
+
+//*****End of Script*****);]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-13 20:36:50</sys_created_on>
+        <sys_id>7172349a2f371010d2d1d99df699b6d4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>TheApplicationAjax</sys_name>
+        <sys_package display_value="TheApplication" source="x_35505_theapplic">ecd15b022f731010d2d1d99df699b6c1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</sys_scope>
+        <sys_update_name>sys_script_include_7172349a2f371010d2d1d99df699b6d4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-13 21:00:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

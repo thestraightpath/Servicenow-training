@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="DELETE">
+        <active>true</active>
+        <description>Client side utilities for TheApplication application.</description>
+        <global>false</global>
+        <name>x_35505_theapplic.ClientUtils</name>
+        <script/>
+        <script_name>ClientUtils</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-13 21:09:01</sys_created_on>
+        <sys_id>ce79789e2f371010d2d1d99df699b68e</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>x_35505_theapplic.ClientUtils</sys_name>
+        <sys_package display_value="TheApplication" source="x_35505_theapplic">ecd15b022f731010d2d1d99df699b6c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</sys_scope>
+        <sys_update_name>sys_ui_script_ce79789e2f371010d2d1d99df699b68e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-14 19:06:40</sys_updated_on>
+        <ui_type>10</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</application>
+        <file_path/>
+        <instance_id>632e6f8fdb4b5c505749cac5059619b8</instance_id>
+        <instance_name>tac04026</instance_name>
+        <name>sys_ui_script_ce79789e2f371010d2d1d99df699b68e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script"><sys_ui_script action="INSERT_OR_UPDATE"><active>true</active><description>Client side utilities for TheApplication application.</description><global>false</global><name>x_35505_theapplic.ClientUtils</name><script/><script_name>ClientUtils</script_name><sys_class_name>sys_ui_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-10-13 21:09:01</sys_created_on><sys_id>ce79789e2f371010d2d1d99df699b68e</sys_id><sys_mod_count>19</sys_mod_count><sys_name>x_35505_theapplic.ClientUtils</sys_name><sys_package display_value="TheApplication" source="x_35505_theapplic">ecd15b022f731010d2d1d99df699b6c1</sys_package><sys_policy/><sys_scope display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</sys_scope><sys_update_name>sys_ui_script_ce79789e2f371010d2d1d99df699b68e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-10-14 19:06:40</sys_updated_on><ui_type>10</ui_type><use_scoped_format>false</use_scoped_format></sys_ui_script></record_update>]]></payload>
+        <payload_hash>1885324471</payload_hash>
+        <record_name>x_35505_theapplic.ClientUtils</record_name>
+        <reverted_from/>
+        <source>74e3d3422f731010d2d1d99df699b646</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-14 19:06:40</sys_created_on>
+        <sys_id>db886da22f371010d2d1d99df699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1752881db4d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-14 19:06:40</sys_updated_on>
+        <type>UI Script</type>
+        <update_guid>57886da2ee3710107ab38de9e6d78f4d</update_guid>
+        <update_guid_history>57886da2ee3710107ab38de9e6d78f4d:1885324471,0584edee74f31010e33ab0ff96c45b5b:-703287548,1192e1ee89f310107439e2671b437060:1930034450,0a51a56e9af31010556b5b76f254c8bf:884235928,c79f1dea64f3101038752021016a7253:15336786,191f5d2e21f31010eef654769098591d:980076403,73ce9dea07f3101017f2fbb3249341fe:-1690593637,264e11ea46f31010863a517424a16c3a:725799888,a39a1d6a97f31010b7c5fd714ddc4b25:760051323,bd6a992a65f31010ccf1750bb91b69e7:-1896366701,22d7112a58f31010fbf133d5e8b6f58d:-703287548,4da695e691f31010e15f111286a46fd3:-2040626972,a686d1e6f2f31010114773d39ba6e4c5:633986015,52d3015600771010a9bf31b543f80a29:-855821387,9183491644771010a347052dfc166f22:-478920631,c0c209d27f771010d95523a03cd57257:-1331206951,7871c192e3771010d5a18e1d3df557bd:604898275,e961c192fd7710105cf2250a46e34eb9:-979084746,3d3bb8decc3710101466d2cb4b237b06:-703287548,3dfaf0de0637101025700bec1b43de7a:1009177451</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-14 19:07:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_script">sys_ui_script</sys_db_object>
+        <sys_id>1a0c6f5d3b7e40408e1e1acf674d4804</sys_id>
+        <sys_metadata>ce79789e2f371010d2d1d99df699b68e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_35505_theapplic.ClientUtils</sys_name>
+        <sys_package display_value="TheApplication" source="x_35505_theapplic">ecd15b022f731010d2d1d99df699b6c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</sys_scope>
+        <sys_scope_delete display_value="">7da6f5e68cb542bda14955d630d89999</sys_scope_delete>
+        <sys_update_name>sys_ui_script_ce79789e2f371010d2d1d99df699b68e</sys_update_name>
+        <sys_update_version display_value="sys_ui_script_ce79789e2f371010d2d1d99df699b68e">db886da22f371010d2d1d99df699b64d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-14 19:07:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

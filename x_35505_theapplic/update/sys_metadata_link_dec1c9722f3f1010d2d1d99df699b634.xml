@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>740d54fe2d0c10107f449a3351684656</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="kb_knowledge"&gt;
+    &lt;kb_knowledge action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article_type&gt;text&lt;/article_type&gt;
+        &lt;author display_value="System Administrator"&gt;6816f79cc0a8016401c5a33be04be441&lt;/author&gt;
+        &lt;can_read_user_criteria/&gt;
+        &lt;cannot_read_user_criteria/&gt;
+        &lt;category/&gt;
+        &lt;cmdb_ci/&gt;
+        &lt;description/&gt;
+        &lt;direct&gt;false&lt;/direct&gt;
+        &lt;disable_commenting&gt;false&lt;/disable_commenting&gt;
+        &lt;disable_suggesting&gt;false&lt;/disable_suggesting&gt;
+        &lt;display_attachments&gt;false&lt;/display_attachments&gt;
+        &lt;flagged&gt;false&lt;/flagged&gt;
+        &lt;image/&gt;
+        &lt;kb_category/&gt;
+        &lt;kb_knowledge_base display_value="Knowledge"&gt;dfc19531bf2021003f07e2c1ac0739ab&lt;/kb_knowledge_base&gt;
+        &lt;meta/&gt;
+        &lt;meta_description&gt;Copy and paste the following information from the knowledge article and create in the "TheLibrary" application&lt;/meta_description&gt;
+        &lt;number&gt;KB0010001&lt;/number&gt;
+        &lt;published&gt;2020-04-13&lt;/published&gt;
+        &lt;rating/&gt;
+        &lt;retired/&gt;
+        &lt;roles/&gt;
+        &lt;short_description&gt;TheLibrary Application - Script Include&lt;/short_description&gt;
+        &lt;source/&gt;
+        &lt;sys_class_name&gt;kb_knowledge&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-04-11 22:23:48&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;740d54fe2d0c10107f449a3351684656&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-04-21 16:34:54&lt;/sys_updated_on&gt;
+        &lt;sys_view_count&gt;1&lt;/sys_view_count&gt;
+        &lt;text&gt;&lt;![CDATA[&lt;p&gt;Copy and paste the following information from the knowledge article and create in the &amp;#34;TheLibrary&amp;#34; application as a script include following the instructions in the manual.  Make sure this is completed in the Studio.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; TheLibrary&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description: &lt;/strong&gt;Script Library for CCW2583 - Knowledge 2020&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Script:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;//*****Start of Script*****&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;p&gt;const DAY &amp;#61; 24 * 60 * 60 * 1000;&lt;/p&gt;
+&lt;p&gt;var location &amp;#61; &amp;#39;TheLibrary&amp;#39;;&lt;br /&gt;var TheLibrary &amp;#61; Class.create();&lt;/p&gt;
+&lt;p&gt;// for debugging - return a record from the given table&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;9bcda2e9dbd0dbc01dcaf3231f9619e5" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;9bcda2e9dbd0dbc01dcaf3231f9619e5&lt;/a&gt;&lt;br /&gt;// reference: &lt;a href="https://developer.servicenow.com/connect.do#!/event/creatorcon18/CCW0685/creatorcon_18_CCW0685_challenge" rel="nofollow"&gt;https://developer.servicenow.com/connect.do#!/event/creatorcon18/CCW0685/creatorcon_18_CCW0685_challenge&lt;/a&gt;&lt;br /&gt;TheLibrary.currentFactory &amp;#61; function (tableName, order, encodedQuery) {&lt;br /&gt;return this.listFactory(tableName, 1, order, encodedQuery);&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// reference: &lt;a href="https://developer.servicenow.com/connect.do#!/event/creatorcon18/CCW0685/creatorcon_18_CCW0685_challenge" rel="nofollow"&gt;https://developer.servicenow.com/connect.do#!/event/creatorcon18/CCW0685/creatorcon_18_CCW0685_challenge&lt;/a&gt;&lt;br /&gt;TheLibrary.listFactory &amp;#61; function (tableName, limit, order, encodedQuery) {&lt;br /&gt;var listRecords &amp;#61; new GlideRecord(tableName);&lt;/p&gt;
+&lt;p&gt;try {&lt;br /&gt;if (!gs.nil(encodedQuery)) {&lt;br /&gt;listRecords.addEncodedQuery(encodedQuery);&lt;br /&gt;}&lt;br /&gt;if (!gs.nil(order)) {&lt;br /&gt;if (order.type &amp;#61;&amp;#61; &amp;#39;descending&amp;#39;) {&lt;br /&gt;listRecords.orderByDesc(order.field);&lt;br /&gt;} else {&lt;br /&gt;listRecords.orderBy(order.field);&lt;br /&gt;}&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;listRecords.setLimit(limit);&lt;br /&gt;listRecords.query();&lt;/p&gt;
+&lt;p&gt;if (listRecords.hasNext() &amp;amp;&amp;amp; limit &amp;#61;&amp;#61; 1) {&lt;br /&gt;listRecords.next();&lt;br /&gt;}&lt;br /&gt;} catch (err) {&lt;br /&gt;throw err;&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;return listRecords;&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// Borrowed from global.JSUtil, and worked-over so that it will work in scoped environment&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;649d6a69dbd0dbc01dcaf3231f9619a9" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;649d6a69dbd0dbc01dcaf3231f9619a9&lt;/a&gt;&lt;br /&gt;TheLibrary.nil &amp;#61; function (item) {&lt;br /&gt;var nilCheck &amp;#61; true;&lt;/p&gt;
+&lt;p&gt;try {&lt;br /&gt;nilCheck &amp;#61; !item&lt;br /&gt;|| (item &amp;#61;&amp;#61; null)&lt;br /&gt;|| (typeof item &amp;#61;&amp;#61; &amp;#39;undefined&amp;#39;)&lt;br /&gt;|| (&amp;#39;&amp;#39; &amp;#61;&amp;#61; &amp;#39;&amp;#39; &amp;#43; item)&lt;br /&gt;|| (item &amp;#61;&amp;#61; &amp;#39;undefined&amp;#39;);&lt;br /&gt;} catch (err) {&lt;br /&gt;this.error(&amp;#39;---&amp;gt; [{1}-{2}] \n{0}&amp;#39;,&lt;br /&gt;[err, new GlideDateTime().getNumericValue()], &amp;#39;SI:&amp;#39; &amp;#43; this.type &amp;#43; &amp;#39;.nil&amp;#39;);&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;return nilCheck;&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// Borrowed from global.JSUtil, and worked-over so that it will work in scoped environment&lt;br /&gt;TheLibrary.notNil &amp;#61; function (item) {&lt;br /&gt;return !this.nil(item);&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// Write into the system log with millisecond and location information&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;1d2e666ddbd0dbc01dcaf3231f961961" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;1d2e666ddbd0dbc01dcaf3231f961961&lt;/a&gt;&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;e3cce265dbd0dbc01dcaf3231f961957" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;e3cce265dbd0dbc01dcaf3231f961957&lt;/a&gt;&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;107ceea1dbd0dbc01dcaf3231f9619be" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;107ceea1dbd0dbc01dcaf3231f9619be&lt;/a&gt;&lt;br /&gt;// usage: utils.info(&amp;#39;This is a test! {0}&amp;#39;,[&amp;#39;hi there&amp;#39;], &amp;#39;FS: tester&amp;#39;);&lt;br /&gt;TheLibrary.parseAndWriteLog &amp;#61; function(logJSON) {&lt;br /&gt;this[logJSON.type](logJSON.message, logJSON.valueList, logJSON.location);&lt;/p&gt;
+&lt;p&gt;// alternate call:&lt;br /&gt;// this.log(logJSON.message, logJSON.valueList, logJSON.location, logJSON.type);&lt;br /&gt;};&lt;br /&gt;TheLibrary.info &amp;#61; function (message, messageArgs, location) {&lt;br /&gt;this.log(message, messageArgs, location, &amp;#39;info&amp;#39;);&lt;br /&gt;};&lt;br /&gt;TheLibrary.error &amp;#61; function (message, messageArgs, location) {&lt;br /&gt;this.log(message, messageArgs, location, &amp;#39;error&amp;#39;);&lt;br /&gt;};&lt;br /&gt;TheLibrary.warn &amp;#61; function (message, messageArgs, location) {&lt;br /&gt;this.log(message, messageArgs, location, &amp;#39;warn&amp;#39;);&lt;br /&gt;};&lt;br /&gt;TheLibrary.log &amp;#61; function (message, messageArgs, location, messageType) {&lt;br /&gt;var debug &amp;#61; gs.getProperty(&amp;#39;x_scn_TheLibrary.debug&amp;#39;, false);&lt;/p&gt;
+&lt;p&gt;// always allow if an error is fed in&lt;br /&gt;if (debug || messageType &amp;#61;&amp;#61; &amp;#39;error&amp;#39;) {&lt;br /&gt;if (!message || !location) {&lt;br /&gt;throw &amp;#39;ERROR: no message or location given - ACNFoundation.log&amp;#39;;&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;if (!messageType) {&lt;br /&gt;messageType &amp;#61; &amp;#39;info&amp;#39;;&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;// only message is present&lt;br /&gt;if (!messageArgs) {&lt;br /&gt;messageArgs &amp;#61; [];&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;// beef up the message with millisecond and location&lt;br /&gt;message &amp;#61; &amp;#39;---&amp;gt; [&amp;#39; &amp;#43; new GlideDateTime().getNumericValue() &amp;#43; &amp;#39;-&amp;#39; &amp;#43; location &amp;#43; &amp;#39;]\n&amp;#39; &amp;#43; message;&lt;/p&gt;
+&lt;p&gt;switch (true) {&lt;br /&gt;case messageType &amp;#61;&amp;#61; &amp;#39;info&amp;#39;:&lt;br /&gt;gs.info(message, messageArgs);&lt;br /&gt;break;&lt;br /&gt;case messageType &amp;#61;&amp;#61; &amp;#39;debug&amp;#39;:&lt;br /&gt;gs.debug(message, messageArgs);&lt;br /&gt;break;&lt;br /&gt;case messageType &amp;#61;&amp;#61; &amp;#39;warn&amp;#39;:&lt;br /&gt;gs.warn(message, messageArgs);&lt;br /&gt;break;&lt;br /&gt;case messageType &amp;#61;&amp;#61; &amp;#39;error&amp;#39;:&lt;br /&gt;gs.error(message, messageArgs);&lt;br /&gt;break;&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// reset the designated application&amp;#39;s repository url&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;d2cc6265dbd0dbc01dcaf3231f9619ee" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;d2cc6265dbd0dbc01dcaf3231f9619ee&lt;/a&gt;&lt;br /&gt;TheLibrary.clear_repository_url &amp;#61; function (applicationReference) {&lt;br /&gt;// gs.info(&amp;#39;---&amp;gt; applicationReference:&amp;#39; &amp;#43; applicationReference);&lt;br /&gt;var repository_configuration &amp;#61; new GlideRecord(&amp;#39;sys_repo_config&amp;#39;);&lt;br /&gt;if (repository_configuration.get(&amp;#39;sys_app&amp;#39;, applicationReference)) {&lt;br /&gt;// gs.info(&amp;#39;---&amp;gt; &amp;#39; &amp;#43; repository_configuration.getValue(&amp;#39;sys_app&amp;#39;));&lt;br /&gt;// repository_configuration.deleteRecord();&lt;br /&gt;repository_configuration.active &amp;#61; false;&lt;br /&gt;repository_configuration.update();&lt;br /&gt;}&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// ------- CHALLENGE LIBRARY ----------&lt;/p&gt;
+&lt;p&gt;// Dedup an Object Array - the .key field is the unique key being passed in associated to the object array&lt;br /&gt;// object.key &amp;#61; object.user_name &amp;#43; &amp;#39;|&amp;#39; &amp;#43; object.company_id;&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;d9cc2265dbd0dbc01dcaf3231f961961" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;d9cc2265dbd0dbc01dcaf3231f961961&lt;/a&gt;&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_article&amp;amp;sys_id&amp;#61;269cac79db2b574454250b55ca96190f" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_article&amp;amp;sys_id&amp;#61;269cac79db2b574454250b55ca96190f&lt;/a&gt;&lt;br /&gt;// usage: deDupList.key will be some user defined combination of fields from the object&lt;br /&gt;TheLibrary.uniqueObjectList &amp;#61; function (objectArray) {&lt;br /&gt;for (var i &amp;#61; 0; i &amp;lt; objectArray.length; i&amp;#43;&amp;#43;) {&lt;br /&gt;for (var j &amp;#61; i &amp;#43; 1; j &amp;lt; objectArray.length; j&amp;#43;&amp;#43;) {&lt;br /&gt;if (objectArray[j].key &amp;#61;&amp;#61; objectArray[i].key) {&lt;br /&gt;objectArray.splice(j, 1); // delete the duplicate&lt;br /&gt;--j; // reduce the array length by one&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// Use the builtin filter function to locate an array element by a value in one&lt;br /&gt;// of its object fields. BTW, when we finally move to ECMA 6 this becomes a one-liner!&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_article&amp;amp;sys_id&amp;#61;1c9aa1e9dbef534454250b55ca961983" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_article&amp;amp;sys_id&amp;#61;1c9aa1e9dbef534454250b55ca961983&lt;/a&gt;&lt;br /&gt;TheLibrary.findObject &amp;#61; function (source, targetList, field) {&lt;br /&gt;return targetList.filter(function (obj) {&lt;br /&gt;return obj[field] &amp;#61;&amp;#61;&amp;#61; source;&lt;br /&gt;})[0];&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_article&amp;amp;sys_id&amp;#61;82c9c1e4dbe393c08e7c2926ca96199e" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_article&amp;amp;sys_id&amp;#61;82c9c1e4dbe393c08e7c2926ca96199e&lt;/a&gt;&lt;br /&gt;TheLibrary.timeDifferenceFromNow &amp;#61; function (dateTimeValue, tzOffSet) {&lt;br /&gt;// apply timezone offset&lt;br /&gt;var offSet &amp;#61; tzOffSet ? dateTimeValue.getTZOffset() : 0.0000;&lt;br /&gt;// get the milliseconds value of the passed-in date/time&lt;br /&gt;// assumption: if timezone offset chosen then this value is in local date/time&lt;br /&gt;var dateTimeMilli &amp;#61; dateTimeValue.getNumericValue();&lt;br /&gt;// get the current date/time value and convert it to milliseconds&lt;br /&gt;var gtNowMilli &amp;#61; new GlideDateTime().getNumericValue() &amp;#43; offSet;&lt;br /&gt;// now return the diff and pass it back converted to days&lt;br /&gt;return (gtNowMilli - dateTimeMilli) / DAY;&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;// GlideRecord to Object Converter - takes a GlideRecord, converts it to an object array. Only returns display value of a reference field&lt;br /&gt;// Turn a single GlideRecord record into an object&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;b96c2ea1dbd0dbc01dcaf3231f9619b9" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;b96c2ea1dbd0dbc01dcaf3231f9619b9&lt;/a&gt;&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;379c2225dbd0dbc01dcaf3231f961988" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;379c2225dbd0dbc01dcaf3231f961988&lt;/a&gt;&lt;br /&gt;TheLibrary.toObject &amp;#61; function(recordToPackage, getValue) {&lt;br /&gt;var packageToSend &amp;#61; {};&lt;br /&gt;&lt;br /&gt;if (gs.nil(getValue)) {&lt;br /&gt;getValue &amp;#61; false;&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;for (var property in recordToPackage) {&lt;br /&gt;try {&lt;br /&gt;var internalType &amp;#61; this.getFieldInfo(recordToPackage[property]).internalType;&lt;br /&gt;&lt;br /&gt;// I am not particularly fond of the com.glide.vars2.variable&lt;br /&gt;// check as this is the type assigned to ALL variable types &lt;br /&gt;// from current.variables.&lt;br /&gt;if (getValue &amp;amp;&amp;amp; &lt;br /&gt;(internalType &amp;#61;&amp;#61; &amp;#39;reference&amp;#39; &lt;br /&gt;|| internalType &amp;#61;&amp;#61; &amp;#39;com.glide.vars2.variable&amp;#39;&lt;br /&gt;|| internalType &amp;#61;&amp;#61; &amp;#39;password2&amp;#39;&lt;br /&gt;)) {&lt;br /&gt;packageToSend[property] &amp;#61; recordToPackage[property];&lt;br /&gt;}&lt;br /&gt;else if (!gs.nil(recordToPackage[property])) {&lt;br /&gt;if (internalType &amp;#61;&amp;#61; &amp;#39;password2&amp;#39;) {&lt;br /&gt;packageToSend[property] &amp;#61; recordToPackage[property];&lt;br /&gt;}&lt;br /&gt;else {&lt;br /&gt;packageToSend[property] &amp;#61; recordToPackage[property].getDisplayValue().trim();&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;else {&lt;br /&gt;packageToSend[property] &amp;#61; &amp;#39;&amp;#39;;&lt;br /&gt;}&lt;br /&gt;}&lt;br /&gt;catch(err){&lt;br /&gt;this.error(&amp;#39;ERROR: {0}&amp;#39;, [err], &amp;#39;SI: &amp;#39; &amp;#43; this.type &amp;#43; &amp;#39;.toObject&amp;#39;);&lt;br /&gt;}&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;return packageToSend;&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// GlideRecord to Object List Converter&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;b96c2ea1dbd0dbc01dcaf3231f9619b9" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;b96c2ea1dbd0dbc01dcaf3231f9619b9&lt;/a&gt;&lt;br /&gt;TheLibrary.toObjectList &amp;#61; function (recordsToPackage, getValue) {&lt;br /&gt;if (gs.nil(getValue)) {&lt;br /&gt;getValue &amp;#61; false;&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;var objectList &amp;#61; [];&lt;/p&gt;
+&lt;p&gt;// loop through all the records and create the object array&lt;br /&gt;while (recordsToPackage.next()) {&lt;br /&gt;var record &amp;#61; this.toObject(recordsToPackage, getValue);&lt;br /&gt;objectList.push(record);&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;return objectList;&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// Convert a GlideRecord to a JSON object&lt;br /&gt;// reference: &lt;a href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;b96c2ea1dbd0dbc01dcaf3231f9619b9" rel="nofollow"&gt;https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;b96c2ea1dbd0dbc01dcaf3231f9619b9&lt;/a&gt;&lt;br /&gt;TheLibrary.toJSON &amp;#61; function (recordsToPackage) {&lt;br /&gt;return global.JSON.parse(global.JSON.stringify(this.toObject(recordsToPackage)));&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// toBoolean(item) – changes a True/False string or a number (1/0) into the boolean true/false.&lt;br /&gt;// reference: &lt;a href="https://developer.servicenow.com/connect.do#!/event/creatorcon18/CCW0685" rel="nofollow"&gt;https://developer.servicenow.com/connect.do#!/event/creatorcon18/CCW0685&lt;/a&gt;&lt;br /&gt;TheLibrary.toBoolean &amp;#61; function (item) {&lt;br /&gt;if (!this.has(item))&lt;br /&gt;return false;&lt;/p&gt;
+&lt;p&gt;if (typeof item &amp;#61;&amp;#61; &amp;#39;boolean&amp;#39;)&lt;br /&gt;return item;&lt;/p&gt;
+&lt;p&gt;if (typeof item &amp;#61;&amp;#61; &amp;#39;number&amp;#39;)&lt;br /&gt;return item !&amp;#61; 0;&lt;/p&gt;
+&lt;p&gt;if ((typeof item &amp;#61;&amp;#61; &amp;#39;string&amp;#39;) || ((typeof item &amp;#61;&amp;#61; &amp;#39;object&amp;#39;) &amp;amp;&amp;amp; (item instanceof String))) {&lt;br /&gt;return item.toLowerCase() &amp;#61;&amp;#61; &amp;#39;true&amp;#39;;&lt;br /&gt;}&lt;/p&gt;
+&lt;p&gt;return true;&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// from JSUtil&lt;br /&gt;TheLibrary.has &amp;#61; function (item) {&lt;br /&gt;return (item !&amp;#61; null) &amp;amp;&amp;amp; (typeof item !&amp;#61; &amp;#39;undefined&amp;#39;);&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// from JSUtil&lt;br /&gt;TheLibrary.doesNotHave &amp;#61; function (item) {&lt;br /&gt;return !this.has(item);&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;// Retrieve record from the lookup table using the user name&lt;br /&gt;// provided from the user interface&lt;br /&gt;TheLibrary.getLookupRecord &amp;#61; function(name) {&lt;br /&gt;var returned_address &amp;#61; &amp;#39;invalid address&amp;#39;;&lt;br /&gt;&lt;br /&gt;var lookupRecord &amp;#61; new GlideRecord(&amp;#39;x_cdltd_thelibrary_lookup_table&amp;#39;);&lt;br /&gt;if (lookupRecord.get(&amp;#39;name&amp;#39;, name)) {&lt;br /&gt;returned_address &amp;#61; lookupRecord.getValue(&amp;#39;address&amp;#39;);&lt;br /&gt;gs.info(&amp;#39;---&amp;gt; made it to here Return Address &amp;#61; &amp;#39; &amp;#43; returned_address);&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;return returned_address;&lt;br /&gt;};&lt;/p&gt;
+&lt;p&gt;TheLibrary.getListOfLookupNames &amp;#61; function() {&lt;br /&gt;var lookupTable &amp;#61; new GlideRecord(&amp;#39;x_cdltd_thelibrary_lookup_table&amp;#39;);&lt;br /&gt;lookupTable.query();&lt;br /&gt;&lt;br /&gt;var lookupTableNames &amp;#61; [];&lt;br /&gt;while (lookupTable.next()) {&lt;br /&gt;lookupTableNames.push(lookupTable.getValue(&amp;#39;name&amp;#39;));&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;return lookupTableNames;&lt;br /&gt;};&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;//*****End of Script*****&lt;/strong&gt;&lt;/p&gt;]]&gt;&lt;/text&gt;
+        &lt;topic&gt;General&lt;/topic&gt;
+        &lt;use_count&gt;0&lt;/use_count&gt;
+        &lt;valid_to&gt;2100-01-01&lt;/valid_to&gt;
+        &lt;wiki/&gt;
+        &lt;workflow_state&gt;published&lt;/workflow_state&gt;
+    &lt;/kb_knowledge&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=740d54fe2d0c10107f449a3351684656"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-15 10:55:47</sys_created_on>
+        <sys_id>dec1c9722f3f1010d2d1d99df699b634</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB0010001</sys_name>
+        <sys_package display_value="TheApplication" source="x_35505_theapplic">ecd15b022f731010d2d1d99df699b6c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</sys_scope>
+        <sys_update_name>sys_metadata_link_dec1c9722f3f1010d2d1d99df699b634</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:55:47</sys_updated_on>
+        <tablename>kb_knowledge</tablename>
+    </sys_metadata_link>
+</record_update>

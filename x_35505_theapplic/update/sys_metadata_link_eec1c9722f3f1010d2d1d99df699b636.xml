@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>7c60a6f52d5c94107f449a3351684653</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="kb_knowledge"&gt;
+    &lt;kb_knowledge action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article_type&gt;text&lt;/article_type&gt;
+        &lt;author display_value="System Administrator"&gt;6816f79cc0a8016401c5a33be04be441&lt;/author&gt;
+        &lt;can_read_user_criteria/&gt;
+        &lt;cannot_read_user_criteria/&gt;
+        &lt;category/&gt;
+        &lt;cmdb_ci/&gt;
+        &lt;description/&gt;
+        &lt;direct&gt;false&lt;/direct&gt;
+        &lt;disable_commenting&gt;false&lt;/disable_commenting&gt;
+        &lt;disable_suggesting&gt;false&lt;/disable_suggesting&gt;
+        &lt;display_attachments&gt;false&lt;/display_attachments&gt;
+        &lt;flagged&gt;false&lt;/flagged&gt;
+        &lt;image/&gt;
+        &lt;kb_category/&gt;
+        &lt;kb_knowledge_base display_value="Knowledge"&gt;dfc19531bf2021003f07e2c1ac0739ab&lt;/kb_knowledge_base&gt;
+        &lt;meta/&gt;
+        &lt;meta_description&gt;Copy and paste the following information from the knowledge article and create in the "TheApplication"&lt;/meta_description&gt;
+        &lt;number&gt;KB0010004&lt;/number&gt;
+        &lt;published&gt;2020-04-23&lt;/published&gt;
+        &lt;rating/&gt;
+        &lt;retired/&gt;
+        &lt;roles/&gt;
+        &lt;short_description&gt;TheApplication Application - Script Include &lt;/short_description&gt;
+        &lt;source/&gt;
+        &lt;sys_class_name&gt;kb_knowledge&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-04-21 15:37:49&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;7c60a6f52d5c94107f449a3351684653&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-04-23 20:31:00&lt;/sys_updated_on&gt;
+        &lt;sys_view_count&gt;1&lt;/sys_view_count&gt;
+        &lt;text&gt;&lt;![CDATA[&lt;p&gt;Copy and paste the following information from the knowledge article and create in the &amp;#34;TheApplication&amp;#34; application as a script include following the instructions in the manual.  Make sure this is completed in the Studio.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Name: &lt;/strong&gt;TheApplicationAjax&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description: &lt;/strong&gt;Utilities to specifically support TheApplication scoped application.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Script:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;//*****Start of Script*****&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;//NOTE: the x_XXXX may need to be changed to match the name of your TheLibrary application name&lt;br /&gt;var utils &amp;#61; x_cdltd_thelibrary.TheLibrary;&lt;/p&gt;
+&lt;p&gt;var TheApplicationAjax &amp;#61; Class.create();&lt;br /&gt;TheApplicationAjax.prototype &amp;#61; Object.extendsObject(global.AbstractAjaxProcessor, {&lt;/p&gt;
+&lt;p&gt;// Send the passed in JSON to be written to the System Log&lt;br /&gt;systemLogger: function() {&lt;br /&gt;var logjson &amp;#61; JSON.parse(this.getParameter(&amp;#39;sysparm_logjson&amp;#39;));&lt;br /&gt;utils.parseAndWriteLog(logjson);&lt;br /&gt;},&lt;/p&gt;
+&lt;p&gt;// Obtain the Address from TheLibrary Lookup table, and pass it back to &lt;br /&gt;// the client(browser)&lt;br /&gt;getAddress: function() {&lt;br /&gt;var name &amp;#61; this.getParameter(&amp;#39;sysparm_username&amp;#39;);&lt;br /&gt;return utils.getLookupRecord(name);&lt;br /&gt;},&lt;/p&gt;
+&lt;p&gt;type: &amp;#39;TheApplicationAjax&amp;#39;&lt;br /&gt;});&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;//*****End of Script*****);&lt;/strong&gt;&lt;/p&gt;]]&gt;&lt;/text&gt;
+        &lt;topic&gt;General&lt;/topic&gt;
+        &lt;use_count&gt;0&lt;/use_count&gt;
+        &lt;valid_to&gt;2100-01-01&lt;/valid_to&gt;
+        &lt;wiki/&gt;
+        &lt;workflow_state&gt;published&lt;/workflow_state&gt;
+    &lt;/kb_knowledge&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=7c60a6f52d5c94107f449a3351684653"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-15 10:55:47</sys_created_on>
+        <sys_id>eec1c9722f3f1010d2d1d99df699b636</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB0010004</sys_name>
+        <sys_package display_value="TheApplication" source="x_35505_theapplic">ecd15b022f731010d2d1d99df699b6c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</sys_scope>
+        <sys_update_name>sys_metadata_link_eec1c9722f3f1010d2d1d99df699b636</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:55:47</sys_updated_on>
+        <tablename>kb_knowledge</tablename>
+    </sys_metadata_link>
+</record_update>

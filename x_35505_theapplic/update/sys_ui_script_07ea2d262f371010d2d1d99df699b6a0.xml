@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Client side utilities for TheApplication application.</description>
+        <global>false</global>
+        <name>x_35505_theapplic.ClientUtils</name>
+        <script><![CDATA[//*****Start of Script*****
+
+// Write to the system log
+// Call the AJAX script include TheApplicationAjax which taps into TheLibrary
+// library functions to write the given information correctly into the System Log on the server-side.
+// There will be no returned response (that we care about).
+var utils = Class.create();
+
+utils.info = function(message, list, location) {
+    utils.log(message, list, location, 'info');
+};
+utils.warn = function(message, list, location) {
+    utils.log(message, list, location, 'warn');
+};
+utils.error = function(message, list, location) {
+    utils.log(message, list, location, 'error');
+};
+
+utils.log = function(message, list, location, type) {
+    try {
+        var logJSON = {
+            type: type,
+            message: message,
+            valueList: list,
+            location: location
+        };
+
+        var systemLogger = new GlideAjax('x_35505_theapplic.TheApplicationAjax');
+        systemLogger.addParam('sysparm_name', 'systemLogger');
+        systemLogger.addParam('sysparm_logjson', JSON.stringify(logJSON));
+        systemLogger.getXML(function(result) {}); // no callback action
+    } catch (err) {
+        g_form.addErrorMessage('---> ERROR: ' + err);
+    }
+};
+
+// Call the AJAX script include TheApplicationAjax which taps into TheLibrary
+// library functions to return the address (back up through the chain).utils
+// Note that the ScriptLoader.getScript loads the functionality locally into the
+// browser/form for use by the calling client script such that the g_form function
+// actually can access the form from this script.
+// Note that to update the field you have to pass in the field name. This is because the callback
+// function is only available on the asynch callback, and not immediately. The script has "moved on"
+// from when the execution originally was fired. The callback then only knows what it was fed.
+// Unlike XMLWait (which is a bad practice) you don't have the return available from the callback
+// function.
+utils.getAddress = function(name, field) {
+    try {
+
+        var getAddress = new GlideAjax('x_35505_theapplic.TheApplicationAjax');
+        getAddress.addParam('sysparm_name', 'getAddress');
+        getAddress.addParam('sysparm_username', name);
+        getAddress.getXMLAnswer(handleResult, null, field);
+
+        // Asynch callback function. Ignore the warning. The editor is not aware of
+        // the need for this formatting.
+        function handleResult(answer, field) {
+            var address = answer;
+			console.log("answer = " + answer)
+            g_form.setValue(field, address);
+        }
+
+    } catch (err) {
+        g_form.addErrorMessage('---> ERROR: ' + err);
+    }
+};
+
+//*****End of Script*****]]></script>
+        <script_name>ClientUtils</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-14 19:20:33</sys_created_on>
+        <sys_id>07ea2d262f371010d2d1d99df699b6a0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_35505_theapplic.ClientUtils</sys_name>
+        <sys_package display_value="TheApplication" source="x_35505_theapplic">ecd15b022f731010d2d1d99df699b6c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TheApplication">ecd15b022f731010d2d1d99df699b6c1</sys_scope>
+        <sys_update_name>sys_ui_script_07ea2d262f371010d2d1d99df699b6a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-14 19:36:25</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>
